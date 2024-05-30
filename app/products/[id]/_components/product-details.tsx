@@ -175,7 +175,7 @@ const ProductDetails = ({
             <SheetTitle className="text-left">Sacola</SheetTitle>
           </SheetHeader>
 
-          <Cart setIsOpen={setIsCartOpen} />
+          <Cart />
         </SheetContent>
       </Sheet>
 
