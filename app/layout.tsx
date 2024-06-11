@@ -22,8 +22,8 @@ export default function RootLayout({
       <body className={`bg-white ${inter.className}`}>
         <AuthProvider>
           <CartProvider>{children}</CartProvider>
-          <Toaster />
         </AuthProvider>
+        <Toaster />
       </body>
     </html>
   );
