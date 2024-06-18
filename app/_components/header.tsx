@@ -29,7 +29,7 @@ const Header = () => {
   const handleSignInClick = () => signIn();
 
   return (
-    <div className="flex justify-between px-5 pt-6">
+    <div className="m-auto flex justify-between px-5 pt-6 lg:max-w-[1184px]">
       <Link href="/">
         <div className="relative h-[30px] w-[100px]">
           <Image

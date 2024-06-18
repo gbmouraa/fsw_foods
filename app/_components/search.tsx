@@ -5,6 +5,8 @@ import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { FormEventHandler, useState } from "react";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
+import BannerOffersImage from "../../public/banner-offers-img.png";
 
 const Search = () => {
   const router = useRouter();
@@ -25,17 +27,47 @@ const Search = () => {
   };
 
   return (
-    <form className="flex gap-2" onSubmit={handleSearchSubmit}>
-      <Input
-        placeholder="Buscar restaurantes"
-        className="border-none"
-        onChange={handleChange}
-        value={search}
-      />
-      <Button size="icon" type="submit">
-        <SearchIcon size={20} />
-      </Button>
-    </form>
+    <div className="overflow-y-hidden lg:flex lg:h-[500px] lg:justify-center lg:bg-primary">
+      <div className="lg:flex lg:w-[1184px] lg:justify-between lg:px-5 lg:pt-[126px]">
+        <div className="lg:flex lg:flex-col">
+          <div className="hidden text-white lg:mb-8 lg:block">
+            <h1 className="text-5xl font-bold">Está com fome?</h1>
+            <p className="mt-3 text-lg">
+              Com apenas alguns cliques, encontre refeições acessíveis perto de
+              você.
+            </p>
+          </div>
+          <form
+            className="flex gap-2 lg:relative"
+            onSubmit={handleSearchSubmit}
+          >
+            <Input
+              placeholder="Buscar restaurantes"
+              className="border-none lg:h-[88px] lg:p-6"
+              onChange={handleChange}
+              value={search}
+            />
+            <Button
+              size="icon"
+              type="submit"
+              className="right-6 top-6 lg:absolute lg:bg-[#FFB100]"
+            >
+              <SearchIcon size={20} />
+            </Button>
+          </form>
+        </div>
+
+        <div className="relative hidden lg:block ">
+          <Image
+            src={BannerOffersImage}
+            alt="Illustatrion"
+            className="relative z-10 h-[274px] w-[274px] translate-y-[120px] object-contain brightness-150 2lg:h-[371px] 2lg:w-[371px] 2lg:translate-y-[28px]"
+          />
+          {/* SHADOW */}
+          <div className=" absolute -left-[100px] top-14 h-[451px] w-[451px] rounded-full bg-radial-gradient "></div>
+        </div>
+      </div>
+    </div>
   );
 };
 
