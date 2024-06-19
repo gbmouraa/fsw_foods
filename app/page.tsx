@@ -57,43 +57,45 @@ const Home = async () => {
         <Search />
       </div>
 
-      <div className="px-5 pt-6">
+      <div className="px-5 pt-6 lg:pt-10">
         <CategoryList />
       </div>
 
-      <div className="px-5 pt-6">
-        <Link href={`/categories/${pizzasCategory?.id}/products`}>
-          <PromoBanner
-            src="/promo-banner-01.png"
-            alt="Até 30% de desconto em pizzas"
-          />
-        </Link>
-      </div>
-
-      <div className="space-y-4 pt-6">
-        <div className="flex items-center justify-between px-5">
-          <h2 className="font-semibold">Pedidos Recomendados</h2>
-          <Button
-            variant="ghost"
-            className="h-fit p-0 text-primary hover:bg-transparent"
-            asChild
-          >
-            <Link href="/products/recommended">
-              Ver todos
-              <ChevronRightIcon size={16} />
-            </Link>
-          </Button>
+      <div className="m-auto max-w-[1204px] gap-x-5 lg:grid lg:grid-cols-2 lg:grid-rows-2 lg:px-5 lg:pt-10">
+        <div className="px-5 pt-6 lg:px-0 lg:pt-10">
+          <Link href={`/categories/${pizzasCategory?.id}/products`}>
+            <PromoBanner
+              src="/promo-banner-01.png"
+              alt="Até 30% de desconto em pizzas"
+            />
+          </Link>
         </div>
-        <ProductList products={products} />
-      </div>
 
-      <div className="px-5 pt-6">
-        <Link href={`/categories/${burguersCategory?.id}/products`}>
-          <PromoBanner
-            src="/promo-banner-02.png"
-            alt="A partir de R$17,90 em lanches"
-          />
-        </Link>
+        <div className="space-y-4 lg:col-span-2 lg:row-start-1 lg:m-auto lg:w-full">
+          <div className="flex items-center justify-between px-5 pt-6 lg:p-0">
+            <h2 className="font-semibold">Pedidos Recomendados</h2>
+            <Button
+              variant="ghost"
+              className="h-fit p-0 text-primary hover:bg-transparent"
+              asChild
+            >
+              <Link href="/products/recommended">
+                Ver todos
+                <ChevronRightIcon size={16} />
+              </Link>
+            </Button>
+          </div>
+          <ProductList products={products} />
+        </div>
+
+        <div className="px-5 pt-6 lg:px-0 lg:pt-10">
+          <Link href={`/categories/${burguersCategory?.id}/products`}>
+            <PromoBanner
+              src="/promo-banner-02.png"
+              alt="A partir de R$17,90 em lanches"
+            />
+          </Link>
+        </div>
       </div>
 
       <div className="space-y-4 py-6">

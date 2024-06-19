@@ -10,7 +10,7 @@ const CategoryItem = ({ category }: CategoryItemProps) => {
   return (
     <Link
       href={`/categories/${category.id}/products`}
-      className="lg: flex items-center justify-center gap-3 rounded-full bg-white px-4 py-3 shadow-md lg:rounded-none lg:shadow-none"
+      className="lg: flex items-center justify-center gap-3 rounded-full bg-white px-4 py-3 shadow-md lg:w-[152px] lg:shadow-sm"
     >
       <Image
         src={category.imageUrl}
