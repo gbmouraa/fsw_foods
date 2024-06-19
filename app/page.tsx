@@ -98,8 +98,8 @@ const Home = async () => {
         </div>
       </div>
 
-      <div className="space-y-4 py-6">
-        <div className="flex items-center justify-between px-5">
+      <div className="m-auto max-w-[1204px] space-y-4 py-6 lg:px-5 lg:pb-10">
+        <div className="flex items-center justify-between px-5 lg:px-0">
           <h2 className="font-semibold">Restaurantes Recomendados</h2>
           <Button
             variant="ghost"
