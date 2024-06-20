@@ -8,6 +8,8 @@ import ProductList from "@/app/_components/product-list";
 import CartBanner from "./_components/cart-banner";
 import { getServerSession } from "next-auth";
 import { authOptions } from "@/app/_lib/auth";
+import Header from "@/app/_components/header";
+import Search from "@/app/_components/search";
 
 interface RestaurantPageProps {
   params: {
@@ -66,6 +68,13 @@ const RestaurantPage = async ({ params: { id } }: RestaurantPageProps) => {
 
   return (
     <div>
+      <div className="relative hidden lg:block">
+        <Header />
+        <div className="px-5 pt-6 lg:px-0">
+          <Search isOnTheHomePage={false} />
+        </div>
+      </div>
+
       <RestaurantImage
         restaurant={restaurant}
         userFavoriteRestaurants={userFavoriteRestaurants}
