@@ -41,11 +41,11 @@ const RestaurantImage = ({
         src={restaurant?.imageUrl}
         alt={restaurant?.name}
         fill
-        className="object-cover"
+        className="object-cover lg:min-h-[380px]"
       />
 
       <Button
-        className="absolute left-4 top-4 rounded-full bg-white text-foreground hover:text-white"
+        className="absolute left-4 top-4 rounded-full bg-white text-foreground hover:text-white lg:hidden"
         size="icon"
         onClick={handleBackClick}
       >
