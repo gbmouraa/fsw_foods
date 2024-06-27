@@ -78,7 +78,7 @@ const RestaurantPage = async ({ params: { id } }: RestaurantPageProps) => {
       <div className="m-auto max-w-[1184px]">
         <div className="min-h-[380px] lg:flex">
           {/* TODO: Ajuatar tamanho da imagem aqui */}
-          <div className="overflow-hidden lg:ml-5 lg:min-h-[380px]  lg:min-w-[60%] lg:rounded-[10px] xl:min-w-[750px]">
+          <div className="overflow-hidden lg:ml-5 lg:min-h-[380px] lg:min-w-[60%]  lg:rounded-[10px] xl:ml-0 xl:min-w-[750px]">
             <RestaurantImage
               restaurant={restaurant}
               userFavoriteRestaurants={userFavoriteRestaurants}
