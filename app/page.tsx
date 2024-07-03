@@ -61,8 +61,8 @@ const Home = async () => {
         <CategoryList />
       </div>
 
-      <div className="m-auto max-w-[1204px] gap-x-5 lg:grid lg:grid-cols-2 lg:grid-rows-2 lg:pt-10">
-        <div className="px-5 pt-6  lg:pt-10">
+      <div className="m-auto max-w-[1204px] gap-x-5 lg:grid lg:grid-flow-row-dense lg:grid-cols-2 lg:grid-rows-2 lg:pt-10">
+        <div className="pl-5 pt-6  lg:pt-10">
           <Link href={`/categories/${pizzasCategory?.id}/products`}>
             <PromoBanner
               src="/promo-banner-01.png"
@@ -71,26 +71,26 @@ const Home = async () => {
           </Link>
         </div>
 
-        <div className="space-y-4 lg:col-span-2 lg:row-start-1 lg:m-auto lg:w-full">
-          <div className="flex items-center justify-between px-5 pt-6 lg:p-0">
-            <h2 className="font-semibold lg:pl-5">Pedidos Recomendados</h2>
+        <div className="grid- space-y-4 px-5 lg:col-span-2 lg:row-start-1 lg:m-auto lg:w-full">
+          <div className="flex items-center justify-between pt-6">
+            <h2 className="font-semibold lg:text-lg">Pedidos Recomendados</h2>
             <Button
               variant="ghost"
               className="h-fit p-0 text-primary hover:bg-transparent"
               asChild
             >
-              <Link href="/products/recommended" className="lg:pr-5">
+              <Link href="/products/recommended">
                 Ver todos
                 <ChevronRightIcon size={16} />
               </Link>
             </Button>
           </div>
-          <div className="pl-5">
+          <div>
             <ProductList products={products} />
           </div>
         </div>
 
-        <div className="px-5 pt-6  lg:pt-10">
+        <div className="pr-5 pt-6 lg:pt-10">
           <Link href={`/categories/${burguersCategory?.id}/products`}>
             <PromoBanner
               src="/promo-banner-02.png"
@@ -100,9 +100,11 @@ const Home = async () => {
         </div>
       </div>
 
-      <div className="m-auto max-w-[1204px] space-y-4 py-6 lg:px-5 lg:pb-10">
+      <div className="m-auto max-w-[1204px] space-y-4 py-6 lg:-translate-y-[68px] lg:px-5 lg:pb-10 lg:pt-10 2lg:-translate-y-[46px]">
         <div className="flex items-center justify-between px-5 lg:px-0">
-          <h2 className="font-semibold">Restaurantes Recomendados</h2>
+          <h2 className="font-semibold lg:text-lg">
+            Restaurantes Recomendados
+          </h2>
           <Button
             variant="ghost"
             className="h-fit p-0 text-primary hover:bg-transparent"

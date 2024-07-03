@@ -75,10 +75,9 @@ const RestaurantPage = async ({ params: { id } }: RestaurantPageProps) => {
         </div>
       </div>
 
-      <div className="m-auto max-w-[1184px]">
+      <div className="m-auto max-w-[1204px] px-5">
         <div className="min-h-[380px] lg:flex">
-          {/* TODO: Ajuatar tamanho da imagem aqui */}
-          <div className="overflow-hidden lg:ml-5 lg:min-h-[380px] lg:min-w-[60%]  lg:rounded-[10px] xl:ml-0 xl:min-w-[750px]">
+          <div className="overflow-hidden  lg:min-h-[380px] lg:min-w-[60%]  lg:rounded-[10px] xl:ml-0 xl:min-w-[750px]">
             <RestaurantImage
               restaurant={restaurant}
               userFavoriteRestaurants={userFavoriteRestaurants}
@@ -87,7 +86,6 @@ const RestaurantPage = async ({ params: { id } }: RestaurantPageProps) => {
 
           <div className="lg:w-[40%]">
             <div className="relative z-50 mt-[-1.5rem] flex items-center justify-between rounded-tl-3xl rounded-tr-3xl bg-white px-5 pt-5 lg:ml-5 lg:mt-0 lg:flex-1 lg:rounded-none lg:pl-0 lg:pr-5 lg:pt-1 xl:px-0">
-              {/* TITULO */}
               <div className="flex items-center gap-[0.375rem] lg:w-full">
                 <div className="relative h-8 w-8">
                   <Image
@@ -142,14 +140,13 @@ const RestaurantPage = async ({ params: { id } }: RestaurantPageProps) => {
           </div>
         </div>
 
-        <div className="m-auto mt-6 max-w-[1182px] space-y-4 px-5  lg:mt-10 xl:px-0">
+        <div className="m-auto mt-6 space-y-4 lg:mt-10">
           <h2 className="font-semibold lg:text-lg">Mais Pedidos</h2>
           <ProductList products={restaurant.products} />
         </div>
 
         {restaurant.categories.map((category) => (
-          <div className="mt-6 space-y-4 px-5 xl:px-0" key={category.id}>
-            {/* TODO: mostrar produtos mais pedidos quando implementarmos realização de pedido */}
+          <div className="mt-6 space-y-4" key={category.id}>
             <h2 className="font-semibold lg:text-lg">{category.name}</h2>
             <ProductList products={category.products} />
           </div>

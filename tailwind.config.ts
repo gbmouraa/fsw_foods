@@ -18,6 +18,9 @@ const config = {
       },
     },
     extend: {
+      gridTemplateRows: {
+        auto: "auto",
+      },
       screens: {
         "2lg": "1130px",
       },
