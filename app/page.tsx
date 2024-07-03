@@ -100,7 +100,7 @@ const Home = async () => {
         </div>
       </div>
 
-      <div className="m-auto max-w-[1204px] space-y-4 py-6 lg:-translate-y-[68px] lg:px-5 lg:pb-10 lg:pt-10 2lg:-translate-y-[46px]">
+      <div className="m-auto max-w-[1204px] space-y-4 py-6 lg:-translate-y-[68px] lg:px-5 lg:pb-10 lg:pt-10 2lg:-translate-y-[46px] xl:-translate-y-[30px]">
         <div className="flex items-center justify-between px-5 lg:px-0">
           <h2 className="font-semibold lg:text-lg">
             Restaurantes Recomendados
