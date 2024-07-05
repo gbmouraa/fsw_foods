@@ -87,9 +87,9 @@ const ProductDetails = ({
 
   return (
     <>
-      <div className="relative z-50 mt-[-1.5rem] rounded-tl-3xl rounded-tr-3xl bg-white py-5">
+      <div className="relative z-50 mt-[-1.5rem] rounded-tl-3xl rounded-tr-3xl bg-white py-5 lg:mt-0 lg:flex lg:w-[40%] lg:flex-col lg:py-0 lg:pl-5">
         {/* RESTAURANTE */}
-        <div className="flex items-center gap-[0.375rem] px-5">
+        <div className="flex items-center gap-[0.375rem] px-5 lg:px-0">
           <div className="relative h-6 w-6">
             <Image
               src={product.restaurant.imageUrl}
@@ -105,10 +105,12 @@ const ProductDetails = ({
         </div>
 
         {/* NOME DO PRODUTO */}
-        <h1 className="mb-2 mt-1 px-5 text-xl font-semibold">{product.name}</h1>
+        <h1 className="mb-2 mt-1 px-5 text-xl font-semibold lg:px-0">
+          {product.name}
+        </h1>
 
         {/* PREÇO DO PRODUTO E QUANTIDADE */}
-        <div className="flex justify-between px-5">
+        <div className="flex justify-between px-5 lg:px-0">
           {/* PREÇO COM DESCONTO */}
           <div>
             <div className="flex items-center gap-2">
@@ -145,21 +147,25 @@ const ProductDetails = ({
           </div>
         </div>
 
-        <div className="px-5">
+        <div className="px-5 lg:px-0">
           <DeliveryInfo restaurant={product.restaurant} />
         </div>
 
-        <div className="mt-6 space-y-3 px-5">
+        <div className="mt-6 space-y-3 px-5 lg:px-0">
           <h3 className="font-semibold">Sobre</h3>
-          <p className="text-sm text-muted-foreground">{product.description}</p>
+          <p className="text-sm text-muted-foreground">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
+            doloribus repellendus molestiae! Eos quod quisquam esse repellat aut
+            sed vel obcaecati rerum unde? Aliquam, sit nam? Earum at sint neque.
+          </p>
         </div>
 
-        <div className="mt-6 space-y-3">
+        <div className="mt-6 space-y-3 lg:hidden">
           <h3 className="px-5 font-semibold">Sucos</h3>
           <ProductList products={complementaryProducts} />
         </div>
 
-        <div className="mt-6 px-5">
+        <div className="mt-6 px-5 lg:px-0">
           <Button
             className="w-full font-semibold"
             onClick={handleAddToCartClick}
