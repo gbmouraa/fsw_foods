@@ -32,7 +32,7 @@ const CartItem = ({ cartProduct }: CartItemProps) => {
     <div className="flex items-center justify-between">
       <div className="flex items-center">
         {/* Imagem Info */}
-        <div className="relative mr-5 h-20 w-20">
+        <div className="relative mr-5 h-20 w-20 lg:h-[92px] lg:w-[92px]">
           <Image
             src={cartProduct.imageUrl}
             alt={cartProduct.name}
@@ -42,7 +42,7 @@ const CartItem = ({ cartProduct }: CartItemProps) => {
         </div>
 
         <div className="space-y-2">
-          <h3 className="text-xs">{cartProduct.name}</h3>
+          <h3 className="text-xs lg:text-sm">{cartProduct.name}</h3>
 
           <div className="flex items-center gap-1">
             <h4 className="text-sm font-semibold">
@@ -69,7 +69,9 @@ const CartItem = ({ cartProduct }: CartItemProps) => {
             >
               <ChevronLeftIcon size={16} />
             </Button>
-            <span className="block w-8 text-xs">{cartProduct.quantity}</span>
+            <span className="block w-8 text-xs lg:text-[15px]">
+              {cartProduct.quantity}
+            </span>
             <Button
               size="icon"
               className="h-7 w-7"

@@ -49,7 +49,7 @@ const CartBanner = ({ restaurant }: CartBannerProps) => {
         <Sheet open={isCartOpen} onOpenChange={setIsCartOpen}>
           <SheetContent className="w-[90vw]">
             <SheetHeader>
-              <SheetTitle className="text-left">Sacola</SheetTitle>
+              <SheetTitle className="text-left lg:text-xl">Sacola</SheetTitle>
             </SheetHeader>
 
             <Cart setIsOpen={setIsCartOpen} />

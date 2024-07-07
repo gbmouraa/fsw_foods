@@ -100,21 +100,21 @@ const Cart = ({ setIsOpen }: CartProps) => {
             <div className="mt-6">
               <Card>
                 <CardContent className="space-y-2 p-5">
-                  <div className="flex items-center justify-between text-xs">
+                  <div className="flex items-center justify-between text-xs lg:text-sm">
                     <span className="text-muted-foreground">Subtotal</span>
                     <span>{formatCurrency(subtotalPrice)}</span>
                   </div>
 
                   <Separator />
 
-                  <div className="flex items-center justify-between text-xs">
+                  <div className="flex items-center justify-between text-xs lg:text-sm">
                     <span className="text-muted-foreground">Descontos</span>
                     <span>- {formatCurrency(totalDiscounts)}</span>
                   </div>
 
                   <Separator className="h[0.5px]" />
 
-                  <div className="flex items-center justify-between text-xs">
+                  <div className="flex items-center justify-between text-xs lg:text-sm">
                     <span className="text-muted-foreground">Entrega</span>
 
                     {Number(products?.[0].restaurant.deliveryFee) === 0 ? (
@@ -127,7 +127,7 @@ const Cart = ({ setIsOpen }: CartProps) => {
                   </div>
                   <Separator />
 
-                  <div className="flex items-center justify-between text-xs font-semibold">
+                  <div className="flex items-center justify-between text-xs font-semibold lg:text-sm">
                     <span>Total</span>
                     <span>{formatCurrency(totalPrice)}</span>
                   </div>
