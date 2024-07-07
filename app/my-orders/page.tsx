@@ -30,8 +30,8 @@ const MyOrdersPage = async () => {
     <>
       <Header />
 
-      <div className="px-5 py-6">
-        <h2 className="pb-6 text-lg font-semibold">Meus Pedidos</h2>
+      <div className="px-5 py-6 lg:m-auto lg:max-w-[1224px]">
+        <h2 className="pb-6 text-lg font-semibold lg:text-xl">Meus Pedidos</h2>
 
         <div className="space-y-4">
           {orders.map((order) => (

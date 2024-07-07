@@ -64,7 +64,7 @@ const OrderItem = ({ order }: OrderItemProps) => {
         <div
           className={`w-fit rounded-full bg-[#EEEEEE] px-2 py-1 text-muted-foreground ${order.status !== "COMPLETED" && "bg-green-500 text-white"}`}
         >
-          <span className="block text-xs font-semibold">
+          <span className="block text-xs font-semibold lg:text-sm">
             {getOrderStatusLabel(order.status)}
           </span>
         </div>
@@ -75,7 +75,7 @@ const OrderItem = ({ order }: OrderItemProps) => {
               <AvatarImage src={order.restaurant.imageUrl} />
             </Avatar>
 
-            <span className="text-sm font-semibold">
+            <span className="text-sm font-semibold lg:text-base">
               {order.restaurant.name}
             </span>
           </div>
@@ -83,7 +83,7 @@ const OrderItem = ({ order }: OrderItemProps) => {
           <Button
             variant="link"
             size="icon"
-            className="h-5 w-5 text-black"
+            className="h-5 w-5 text-black lg:w-8"
             asChild
           >
             <Link href={`/restaurants/${order.restaurantId}`}>
@@ -99,12 +99,12 @@ const OrderItem = ({ order }: OrderItemProps) => {
         <div className="space-y-3">
           {order.products.map((product) => (
             <div key={product.id} className="flex items-center gap-2">
-              <div className="flex h-5 w-5 items-center justify-center rounded-full bg-muted-foreground">
-                <span className="block text-xs text-white">
+              <div className="flex h-5 w-5 items-center justify-center rounded-full bg-muted-foreground lg:h-[22px] lg:w-[22px]">
+                <span className="block text-xs text-white lg:text-sm">
                   {product.quantity}
                 </span>
               </div>
-              <span className="text-xs text-muted-foreground">
+              <span className="text-xs text-muted-foreground lg:text-sm">
                 {product.product.name}
               </span>
             </div>
@@ -119,7 +119,7 @@ const OrderItem = ({ order }: OrderItemProps) => {
           <p className="text-sm">{formatCurrency(Number(order.totalPrice))}</p>
           <Button
             variant="ghost"
-            className="text-xs text-primary"
+            className="text-xs text-primary lg:text-sm"
             size="sm"
             disabled={order.status !== "COMPLETED"}
             onClick={handlleRedoOrderClick}
