@@ -67,7 +67,7 @@ const RestaurantPage = async ({ params: { id } }: RestaurantPageProps) => {
   });
 
   return (
-    <div className="lg:pb-10">
+    <div className="lg:pb-32">
       <div className="relative hidden lg:block">
         <Header />
         <div className="px-5 pt-6 lg:px-0">

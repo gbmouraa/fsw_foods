@@ -29,13 +29,13 @@ const CartBanner = ({ restaurant }: CartBannerProps) => {
 
   return (
     <div className="fixed bottom-0 left-0 z-50 w-full border-t border-solid border-muted bg-white p-5 pt-3 shadow-md">
-      <div className="flex items-center justify-between">
+      <div className="flex items-center justify-between gap-x-12 lg:m-auto lg:max-w-[1164px] lg:justify-normal">
         {/* PREÇO */}
         <div>
-          <span className="text-xs text-muted-foreground">
+          <span className="text-xs text-muted-foreground lg:text-sm">
             Total sem entrega
           </span>
-          <h3 className="font-semibold">
+          <h3 className="font-semibold lg:text-lg">
             {formatCurrency(totalPrice)}{" "}
             <span className="text-xs font-normal text-muted-foreground">
               / {totalQuantity} {totalQuantity > 1 ? "itens" : "item"}
@@ -43,7 +43,9 @@ const CartBanner = ({ restaurant }: CartBannerProps) => {
           </h3>
         </div>
         {/* BOTÃO */}
-        <Button onClick={() => setIsCartOpen(true)}>Ver Sacola</Button>
+        <Button onClick={() => setIsCartOpen(true)} className="lg:w-[177px]">
+          Ver Sacola
+        </Button>
         <Sheet open={isCartOpen} onOpenChange={setIsCartOpen}>
           <SheetContent className="w-[90vw]">
             <SheetHeader>
