@@ -55,7 +55,7 @@ const Header = () => {
 
         <SheetContent>
           <SheetHeader>
-            <SheetTitle className="text-left">Menu</SheetTitle>
+            <SheetTitle className="text-left lg:text-xl">Menu</SheetTitle>
           </SheetHeader>
 
           {data?.user ? (
