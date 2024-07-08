@@ -80,7 +80,7 @@ const Search = ({ isOnTheHomePage }: SearchProps) => {
             className="relative z-10 h-[274px] w-[274px] translate-y-[120px] object-contain brightness-150 2lg:h-[371px] 2lg:w-[371px] 2lg:translate-y-[28px]"
           />
           {/* SHADOW */}
-          <div className=" absolute -left-[100px] top-14 h-[451px] w-[451px] rounded-full bg-radial-gradient "></div>
+          <div className=" absolute -left-[100px] top-14 h-[451px] w-[451px] rounded-full bg-radial-gradient " />
         </div>
       </div>
     </div>
