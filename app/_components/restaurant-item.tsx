@@ -74,11 +74,13 @@ const RestaurantItem = ({
         </div>
 
         <div>
-          <h3 className="text-sm font-semibold">{restaurant.name}</h3>
+          <h3 className="text-sm font-semibold lg:text-lg">
+            {restaurant.name}
+          </h3>
           <div className="flex gap-3">
             <div className="flex items-center gap-1">
               <BikeIcon size={14} className="text-primary" />
-              <span className="text-xs text-muted-foreground">
+              <span className="text-xs text-muted-foreground lg:text-sm">
                 {Number(restaurant.deliveryFee) === 0
                   ? "Entrega grátis"
                   : formatCurrency(Number(restaurant.deliveryFee))}
@@ -87,7 +89,7 @@ const RestaurantItem = ({
 
             <div className="flex items-center gap-1">
               <TimerIcon size={14} className="text-primary" />
-              <span className="text-xs text-muted-foreground">
+              <span className="text-xs text-muted-foreground lg:text-sm">
                 {restaurant.deliveryTimeMinutes} min
               </span>
             </div>
